@@ -17,6 +17,64 @@ body {
     line-height: 1.5;
     font-family: 'Kanit', sans-serif;
     color: var(--body-color);
+    display: grid;
+    grid-template-areas: "head head"
+        "nav  nav"
+        "main main"
+        "foot foot";
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+body>* {
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+}
+
+body>main {
+    grid-area: main;
+}
+
+body#about img {
+    width: 6em;
+    display: inline;
+    float: left;
+    margin-right: var(--horizontal-space);
+    margin-bottom: var(--vertical-space);
+}
+
+body>header,
+body>nav {
+    background-color: #d6d6d6;
+}
+
+body>header {
+    grid-area: head;
+}
+
+body>nav {
+    grid-area: nav;
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+body>nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body>footer {
+    grid-area: foot;
+}
+
+body#portfolio ul#portfolioItems li {
+    margin-bottom: 4em;
+    margin-top: 1em;
+}
+
+body#portfolio ul#portfolioItems li img {
+    max-height: 15em;
+    max-width: 15em;
 }
 
 h1,
@@ -37,59 +95,10 @@ a:hover {
     text-decoration-color: var(--heading-color);
 }
 
-body#about img {
-    width: 6em;
-    display: inline;
-    float: left;
-    margin-right: var(--horizontal-space);
-    margin-bottom: var(--vertical-space);
-}
-
 p {
     max-width: 50em;
-}
-
-body {
-    display: grid;
-    grid-template-areas: "head head"
-        "nav  nav"
-        "main main"
-        "foot foot";
-    grid-template-columns: 1fr 7fr;
-    grid-template-rows: auto auto 1fr auto;
-}
-
-body>header,
-body>nav {
-    background-color: #d6d6d6;
-}
-
-body>header {
-    grid-area: head;
-}
-
-body>* {
-    padding-left: var(--vertical-space);
-    padding-right: var(--horizontal-space);
-}
-
-body>nav {
-    grid-area: nav;
-    padding-bottom: 2em;
-    margin-bottom: 1em;
-}
-
-body>nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-body>main {
-    grid-area: main;
-}
-
-body>footer {
-    grid-area: foot;
+    padding-bottom: 1em;
+    padding-top: 1em;
 }
 
 header,
@@ -101,16 +110,6 @@ footer {
 header h1,
 footer h1 {
     margin: 0;
-}
-
-body#portfolio ul#portfolioItems li {
-    margin-bottom: 4em;
-    margin-top: 1em;
-}
-
-body#portfolio ul#portfolioItems li img {
-    max-height: 15em;
-    max-width: 15em;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
@@ -181,6 +180,10 @@ body#portfolio ul#portfolioItems li img {
     body>* {
         padding-left: var(--vertical-space);
         padding-right: var(--vertical-space);
+    }
+
+    main {
+        padding-left: var(--horizontal-space);
     }
 
     body#about img {
