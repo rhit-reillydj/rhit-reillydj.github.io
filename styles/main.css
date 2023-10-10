@@ -27,7 +27,7 @@ body {
 }
 
 body>* {
-    padding-left: var(--horizontal-space);
+    padding-left: var(--vertical-space);
     padding-right: var(--horizontal-space);
 }
 
@@ -83,6 +83,13 @@ h3 {
     line-height: 1.2;
     font-family: 'Poltawski Nowy', serif;
     color: var(--heading-color);
+    padding-top: .3em;
+}
+
+dt,
+span,
+li {
+    padding-top: .1em;
 }
 
 a {
@@ -97,8 +104,8 @@ a:hover {
 
 p {
     max-width: 50em;
-    padding-bottom: 1em;
-    padding-top: 1em;
+    padding-bottom: .5em;
+    padding-top: .3em;
 }
 
 header,
@@ -113,12 +120,6 @@ footer h1 {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 #Name>body {
     background-color: #151719;
