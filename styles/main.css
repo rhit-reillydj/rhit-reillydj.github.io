@@ -19,7 +19,9 @@ body {
     color: var(--body-color);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     line-height: 1.2;
     font-family: 'Poltawski Nowy', serif;
     color: var(--heading-color);
@@ -35,7 +37,7 @@ a:hover {
     text-decoration-color: var(--heading-color);
 }
 
-body#about img { 
+body#about img {
     width: 6em;
     display: inline;
     float: left;
@@ -50,51 +52,54 @@ p {
 body {
     display: grid;
     grid-template-areas: "head head"
-                         "nav  nav"
-                         "main main"
-                         "foot foot";
+        "nav  nav"
+        "main main"
+        "foot foot";
     grid-template-columns: 1fr 7fr;
     grid-template-rows: auto auto 1fr auto;
 }
 
-body > header, body > nav {
+body>header,
+body>nav {
     background-color: #d6d6d6;
 }
 
-body > header {
+body>header {
     grid-area: head;
 }
 
-body > * {
+body>* {
     padding-left: var(--vertical-space);
     padding-right: var(--horizontal-space);
 }
 
-body > nav {
+body>nav {
     grid-area: nav;
     padding-bottom: 2em;
     margin-bottom: 1em;
 }
 
-body > nav ul {
+body>nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-body > main {
+body>main {
     grid-area: main;
 }
 
-body > footer {
+body>footer {
     grid-area: foot;
 }
 
-header, footer {
+header,
+footer {
     padding-top: var(--vertical-space);
     padding-bottom: var(--vertical-space);
 }
 
-header h1, footer h1 {
+header h1,
+footer h1 {
     margin: 0;
 }
 
@@ -103,59 +108,67 @@ body#portfolio ul#portfolioItems li {
     margin-top: 1em;
 }
 
-body#portfolio ul#portfolioItems li img{
+body#portfolio ul#portfolioItems li img {
     max-height: 15em;
     max-width: 15em;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-#Name > body {
-  background-color:  #151719;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+#Name>body {
+    background-color: #151719;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-#Name > .waviy {
-  position: relative;
-  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-  font-size: 20px;
+
+#Name>.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+    font-size: 20px;
 }
-#Name > .waviy span {
-  font-family: 'Poltawski Nowy', serif;
-  position: relative;
-  display: inline-block;
-  color: var(--heading-color);
-  text-transform: uppercase;
-  animation: waviy 1s;
-  animation-iteration-count: 3;
-  animation-delay: calc(.1s * var(--i));
-  
+
+#Name>.waviy span {
+    font-family: 'Poltawski Nowy', serif;
+    position: relative;
+    display: inline-block;
+    color: var(--heading-color);
+    text-transform: uppercase;
+    animation: waviy 1s;
+    animation-iteration-count: 3;
+    animation-delay: calc(.1s * var(--i));
+
 }
+
 @keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
-  }
-  20% {
-    transform: translateY(-20px)
-  }
+
+    0%,
+    40%,
+    100% {
+        transform: translateY(0)
+    }
+
+    20% {
+        transform: translateY(-20px)
+    }
 }
 
 @media (min-width: 767px) {
     body {
         grid-template-areas: "head main"
-                             "nav main"
-                             "nav foot";
+            "nav main"
+            "nav foot";
         grid-template-rows: 7em auto auto;
     }
 
-    body#portfolio ul#portfolioItems li img{
+    body#portfolio ul#portfolioItems li img {
         max-height: 20em;
         max-width: 20em;
     }
@@ -165,44 +178,46 @@ body#portfolio ul#portfolioItems li img{
         padding-right: 2%;
     }
 
-    body > * {
+    body>* {
         padding-left: var(--vertical-space);
         padding-right: var(--vertical-space);
     }
 
-    body#about img { 
+    body#about img {
         width: 14em;
     }
 
-    #Name > .waviy {
+    #Name>.waviy {
         font-size: 25px;
     }
 
-    body > header, body > nav {
+    body>header,
+    body>nav {
         width: 12em;
     }
 }
 
 @media (min-width: 1440px) {
-    body > * {
+    body>* {
         padding-left: var(--horizontal-space);
         padding-right: var(--horizontal-space);
     }
 
-    body#portfolio ul#portfolioItems li img{
+    body#portfolio ul#portfolioItems li img {
         max-height: 30em;
         max-width: 30em;
     }
 
-    body#about img { 
+    body#about img {
         width: 10em;
     }
 
-    #Name > .waviy {
+    #Name>.waviy {
         font-size: 30px;
     }
 
-    body > header, body > nav {
+    body>header,
+    body>nav {
         width: 16em;
     }
 
