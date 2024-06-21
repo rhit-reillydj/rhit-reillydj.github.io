@@ -146,6 +146,10 @@ footer h1 {
     animation-delay: calc(.1s * var(--i));
 }
 
+#skew {
+    transform:skew(60deg, -30deg) scaleY(.66667);
+}
+
 @keyframes waviy {
 
     0%,
