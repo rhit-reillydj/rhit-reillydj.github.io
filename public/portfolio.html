@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dominic Reilly's Portfolio Website">
+
+    <title>Portfolio - Dominic Reilly</title>
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/portfolio.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Favicon/favicon-16x16.png">
+</head>
+
+<body class="indexBody">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <section id="portfolio" class="portfolio">
+        <header>
+            <h1><a href="index.html">Dominic Reilly's Portfolio</a></h1>
+            <button class="sidebar-toggle" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="portfolio-row">
+                <div class="portfolio-item top-row">
+                    <img src="images/portfolio/project6.jpg" alt="Pacific Builders Website">
+                    <h3><a href="https://pacificbuilders.site" target="_blank">Pacific Builders Website</a></h3>
+                    <p>
+                        I designed and developed a professional website for Pacific Builders Stone and Tile, featuring a
+                        gallery that showcases their exquisite masonry work.
+                    </p>
+                </div>
+                <div class="portfolio-item top-row">
+                    <img src="images/portfolio/project5.jpg" alt="Chess Web App">
+                    <h3><a href="https://csse280-chesswebapp.web.app/" target="_blank">Chess OpenWizard</a></h3>
+                    <p>
+                        I developed a web app from scratch that lets users take a quiz to find chess openings that suit
+                        them and learn more about those openings.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="portfolio-row">
+                <div class="portfolio-item">
+                    <img src="images/portfolio/project2.png" alt="Connect 4 With AI">
+                    <h3><a href="https://studio.code.org/projects/applab/RkHzpEgxByvylUW39Pxh3dE_UDpGPzeh4RjEUo5SL10"
+                            target="_blank">Connect 4 With AI</a></h3>
+                    <p>
+                        In high school, I created a fully functioning and animated Connect 4 game where players can
+                        compete against another player or an AI set to easy, medium, or hard difficulty levels.
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio/project1.png" alt="Robotics Team Programmer">
+                    <h3>Lead Programmer for FIRST Robotics Team</h3>
+                    <p>
+                        I was the sole programmer for my high schools FIRST Robotics team, creating all the code from
+                        scratch after it was lost during COVID.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="portfolio-row">
+                <div class="portfolio-item">
+                    <img src="images/portfolio/project3.jpeg" alt="CSforSD Award Winner">
+                    <h3>CSforSD Award Winner</h3>
+                    <p>
+                        I won 1st place in the CSforSD Video Contest, a competition where high school students showcased
+                        their computer science projects. My winning entry was a game I created called Gravity Runner.
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio/project4.jpg" alt="Disposal of Nuclear Waste Research Poster">
+                    <h3>Disposal of Nuclear Waste Research Proposal</h3>
+                    <p>
+                        In high school, I conducted research on nuclear waste disposal at the San Onofre Power Plant. I
+                        wrote a research paper, created a poster, and presented my findings on the topic.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="resume" class="resume">
+        <div class="container resume-content">
+            <div class="resume-wrapper">
+                <iframe src="images/resume.pdf" class="resume-pdf" type="application/pdf"></iframe>
+                <a href="images/resume.pdf" download class="download-button">Download Resume</a>
+            </div>
+        </div>
+    </section> -->
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me!</h2>
+            <div class="container">
+
+                <div class="contactInfo">
+                    <i class="fas fa-envelope fa-3x"></i>
+                    <h4>reillydj@rose-hulman.edu</h4>
+                </div>
+
+                <div class="contactInfo">
+                    <i class="fas fa-phone fa-3x"></i>
+                    <h4>+1 (619) 792-5617</h4>
+                </div>
+
+                <div class="contactInfo">
+                    <i class="fab fa-linkedin fa-3x"></i>
+                    <h4>Check Out My <a href="https://www.linkedin.com/in/dominicreilly" target="_blank">LinkedIn</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

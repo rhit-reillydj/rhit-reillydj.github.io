@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Poltawski+Nowy:ital,wght@1,700&display=swap');
+
+:root {
+    --vertical-space: 1.5rem;
+    --horizontal-space: 3rem;
+
+    --light-color: #8697A6;
+    --body-color: #193140;
+    --heading-color: #285975;
+    --contrast-color: #FF5538;
+}
+
+body {
+    background-color: #d6d6d6;
+    background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Kanit', sans-serif;
+    color: var(--body-color);
+    display: grid;
+    grid-template-areas: "head head"
+        "nav  nav"
+        "main main"
+        "foot foot";
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+body>* {
+    padding-left: var(--vertical-space);
+    padding-right: var(--horizontal-space);
+}
+
+body>main {
+    grid-area: main;
+}
+
+body#about img {
+    width: 6em;
+    display: inline;
+    float: left;
+    margin-right: var(--horizontal-space);
+    margin-bottom: var(--vertical-space);
+}
+
+body>header,
+body>nav {
+    background-color: #d6d6d6;
+}
+
+body>header {
+    grid-area: head;
+}
+
+body>nav {
+    grid-area: nav;
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+body>nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body>footer {
+    grid-area: foot;
+}
+
+body#portfolio ul#portfolioItems li {
+    margin-bottom: 4em;
+    margin-top: 1em;
+}
+
+body#portfolio ul#portfolioItems li img {
+    max-height: 15em;
+    max-width: 15em;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-family: 'Poltawski Nowy', serif;
+    color: var(--heading-color);
+    padding-top: .3em;
+}
+
+dt,
+span,
+li {
+    padding-top: .1em;
+}
+
+a {
+    color: var(--body-color);
+    text-decoration-color: var(--contrast-color);
+}
+
+a:hover {
+    color: var(--contrast-color);
+    text-decoration-color: var(--heading-color);
+}
+
+p {
+    max-width: 50em;
+    padding-bottom: .5em;
+    padding-top: .3em;
+}
+
+header,
+footer {
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+}
+
+header h1,
+footer h1 {
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+#Name>body {
+    background-color: #151719;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#Name>.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+    font-size: 35px;
+}
+
+#Name>.waviy span {
+    font-family: 'Poltawski Nowy', serif;
+    position: relative;
+    display: inline-block;
+    color: var(--heading-color);
+    text-transform: uppercase;
+    animation: waviy 1s;
+    animation-iteration-count: 5;
+    animation-delay: calc(.1s * var(--i));
+}
+
+#skew {
+    transform:skew(60deg, -30deg) scaleY(.66667);
+}
+
+@keyframes waviy {
+
+    0%,
+    40%,
+    100% {
+        transform: translateY(0)
+    }
+
+    20% {
+        transform: translateY(-20px)
+    }
+}
+
+@media (min-width: 767px) {
+    body {
+        grid-template-areas: "head main"
+            "nav main"
+            "nav foot";
+        grid-template-rows: 7em auto auto;
+    }
+
+    body#portfolio ul#portfolioItems li img {
+        max-height: 20em;
+        max-width: 20em;
+    }
+
+    body#portfolio ul#portfolioItems li {
+        flex-basis: 48%;
+        padding-right: 2%;
+    }
+
+    body>* {
+        padding-left: var(--vertical-space);
+        padding-right: var(--vertical-space);
+    }
+
+    main {
+        padding-left: var(--horizontal-space);
+    }
+
+    body#about img {
+        width: 14em;
+    }
+
+    #Name>.waviy {
+        font-size: 25px;
+    }
+
+    body>header,
+    body>nav {
+        width: 12em;
+    }
+}
+
+@media (min-width: 1440px) {
+    body>* {
+        padding-left: var(--horizontal-space);
+        padding-right: var(--horizontal-space);
+    }
+
+    body#portfolio ul#portfolioItems li img {
+        max-height: 30em;
+        max-width: 30em;
+    }
+
+    body#about img {
+        width: 10em;
+    }
+
+    #Name>.waviy {
+        font-size: 30px;
+    }
+
+    body>header,
+    body>nav {
+        width: 16em;
+    }
+
+    nav {
+        padding-top: 2em;
+    }
+}

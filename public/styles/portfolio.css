@@ -1,0 +1,356 @@
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+
+:root {
+    --light-color: #cfcfc4;
+    --heading-color: #232ED1;
+    --body-color: #101D42;
+    --contrast-color: #50FFB1;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    scroll-snap-type: y mandatory;
+}
+
+html,
+body,
+section {
+    block-size: 100%;
+    min-height: 100%;
+}
+
+
+
+/* Main Page */
+.indexBody {
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+body {
+    background-color: #6c91c2;
+    background-image: url("../images/brushed-alum.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+header {
+    background: var(--body-color);
+    color: var(--heading-color);
+    padding: 10px 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    /* Adjust height as needed */
+    position: absolute;
+    z-index: 255;
+    display: flex;
+    align-items: center;
+    /* Center content vertically */
+    justify-content: center;
+    /* Center all items horizontally */
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    /* Center items vertically within the container */
+    width: 100%;
+    max-width: 1200px;
+    /* Adjust to control container width */
+    padding: 0 20px;
+    /* Adjust for horizontal spacing */
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    /* Adjusted to match header color */
+    font-size: 1.5em;
+    /* Adjust font size as needed */
+    text-align: center;
+    flex: 1;
+    /* Allows title to take up available space */
+    color: var(--light-color);
+}
+
+header a {
+    color: var(--light-color);
+}
+
+header a:hover {
+    color: var(--contrast-color);
+}
+
+header nav {
+    display: flex;
+    flex: 1;
+    /* Allows nav to take up available space */
+    justify-content: flex-end;
+    /* Aligns nav items to the right */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--body-color);
+    color: var(--light-color);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: var(--contrast-color);
+    color: var(--body-color);
+}
+
+
+
+/* Navbar */
+.sidebar-toggle {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 10px;
+    position: absolute;
+    right: 10px;
+}
+
+.sidebar-toggle:hover {
+    color: var(--contrast-color);
+}
+
+.navbar {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 50px;
+    transition: left 0.3s ease;
+
+}
+
+.navbar.active {
+    left: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    /* Remove default margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Align items to the top */
+    align-items: center;
+    /* Center horizontally */
+    height: 100%;
+}
+
+.navbar li {
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    /* Ensure the li elements take up full width */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.navbar a:hover {
+    color: var(--contrast-color);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+/* Portfolio Section */
+.portfolio {
+    padding: 50px 0;
+}
+
+.portfolio-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    height: 100%;
+}
+
+.portfolio-item {
+    background: var(--body-color);
+    color: var(--light-color);
+    flex: 1 1 calc(33.333% - 40px);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.top-row {
+    margin-top:4rem;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.portfolio-item h3 {
+    margin: 10px 0;
+}
+
+.portfolio-item p {
+    color: var(--light-color);
+}
+
+
+.portfolio-item a {
+    color: var(--light-color);
+    text-decoration: underline;
+    text-decoration-color: var(--contrast-color);
+}
+
+.portfolio-item a:hover {
+    color: var(--contrast-color);
+    text-decoration: underline;
+    text-decoration-color: var(--light-color);
+}
+
+
+
+
+
+
+
+/* Contact Section */
+.contact {
+    color: var(--heading-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact h2 {
+    color: var(--body-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact i {
+    color: var(--body-color);
+}
+
+.contact a {
+    color: var(--heading-color);
+    text-decoration: underline;
+    text-decoration-color: var(--contrast-color);
+}
+
+.contact a:hover {
+    color: var(--contrast-color);
+    text-decoration: underline;
+    text-decoration-color: var(--heading-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    /* Adjust space between items */
+}
+
+
+
+
+
+
+
+
+/* SCREEN SIZE BREAKPOINTS */
+
+
+/* Smallest Screen Sizes */
+@media (max-width: 600px) {
+    html {
+        scroll-snap-type: none;
+    }
+
+    section {
+        height: auto;
+    }
+
+    .portfolio-row {
+        flex-direction: column;
+    }
+
+    .resume-content {
+        width: 90%;
+    }
+
+    .resume-pdf {
+        height: 50vh;
+        /* Adjust height for smaller screens */
+    }
+}
+
+/* Medium Screen Size */
+@media (min-width: 767px) {}
+
+/* Largest Screen Size */
+@media (min-width: 990px) {}
